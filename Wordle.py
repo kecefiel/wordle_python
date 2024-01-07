@@ -279,7 +279,7 @@ def play_again():
     print(word)
 
 def win_conf():
-#Εφόσον ο παίκτης επιλ΄εξει να παίξει καινούριο παιχνίδι, το παράθυρο αλλάζει χρώμα με τη χρήση της συνάρτησης rgb_to_hex
+'''Εφόσον ο παίκτης επιλέξει να παίξει καινούριο παιχνίδι, το παράθυρο αλλάζει χρώμα με τη χρήση της συνάρτησης rgb_to_hex'''
     global col,keyboard
     col=rgb_to_hex()#Επιλέγεται τυχαία νέο χρώμα από τη συνάρτηση rgb_to_hex
     window.configure(bg=col)#Το παράθυρο,το emptybox,το background του label 'Wordle' και το background του πληκτρολογίου αποκτούν
@@ -325,7 +325,7 @@ window=tk.Tk()#Κυρίως παράθυρο του παιχνιδιού
 window.title('Wordle')#Τίτλος κυρίως παραθύρου
 window.geometry('600x700')#Διαστάσεις κυρίως παραθύρου
 window.resizable(width=False, height=False)
-color=rgb_to_hex()#Μεταβλητή που
+color=rgb_to_hex()#Μεταβλητή οπου εκχωρειται η τιμη της συναρτησης rgb_to_hex
 emptybox=tk.Label (window,height=3,width=22,bg=color)#Κενό παραλληλόγραμμο που βοηθά στην τοποθέτηση του πίνακα στο κέντρο του παραθύρου
 emptybox.grid()
 wl=tk.Label(window,text='Wordle',bg=color,font=('London',22, 'bold'))#label που αναγράφει το όνομα του παιχνιδιού
