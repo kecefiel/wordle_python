@@ -173,7 +173,7 @@ def color_board(color_list):
 def getGuess(guess,guesses):
     global word,guessN
     if guesses < 6:
-        colors=[]        
+        colors=[]    #Λιστα που θα προστεθουν με τη σειρα τα χρωματα που θα παρουν τα κουτια της γραμμης
         if len(guess) == 5:
             for i, letter in enumerate(guess): #Το i αντιστοιχεί στην θέση και το letter στο γράμμα/στοιχείο της guess
                     if letter == word[i]: #Αν το letter είναι ίδιο με το αντίστοιχο γράμμα της word
@@ -185,13 +185,13 @@ def getGuess(guess,guesses):
                     if letter not in word:    #Αν το letter δεν υπάρχει στην word
                         u = 0
                         
-                    colorf(letter,u)                     
-                    colors.append(u)
-                    if len(colors)==5:      
-                        color_board(colors)
-            if guess == word:
+                    colorf(letter,u)   #Αλλαγη χρωματος πληκτρων                
+                    colors.append(u) 
+                    if len(colors)==5:   #Οταν δωθουν και τα 5 χρωματα    
+                        color_board(colors)   #Αλλαγη χρωματος καθε κουτιου
+            if guess == word:  
                 create_win_popup()
-            elif guesses==5:
+            elif guesses==5:  #Αν τελειωσουν οι προσπαθειες
                     create_lose_popup()
         
 
